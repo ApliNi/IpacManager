@@ -41,3 +41,6 @@ export function serverHttpError(err, req, res, next){
 	res.end();
 	logger.error('[HTTP] ['+ ip.join(', ') +'] -> [500]: '+ req.url);
 };
+
+
+logger.info('[HTTP] HTTP 服务器启动完成');

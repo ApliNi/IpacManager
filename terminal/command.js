@@ -1,10 +1,13 @@
 // 控制台命令
 
 import readline from 'readline';
-import fs from 'fs';
+import { readdirSync } from 'fs';
 import { EventEmitter } from 'events';
 import { logger } from '../lib/logger.js';
 import path from 'path';
+
+
+logger.info('[终端] 正在启动终端命令模块');
 
 
 // 配置
@@ -12,11 +15,11 @@ export let Terminal = {
 	// 用户运行指令事件
 	RunCommandEvent: new EventEmitter(),
 	// 构造函数
-	Constructor: function (mainCommand, commandArray) {
+	Constructor: function(mainCommand, commandArray){
 		this.mainCommand = mainCommand,
 		this.commandArray = commandArray,
 		this.sendMessage = (message) => {
-			logger.info(message);
+			console.log(message);
 		}
 	}
 };
@@ -26,7 +29,8 @@ export let Terminal = {
 let rl = readline.createInterface({
 	input: process.stdin,
 	output: process.stdout,
-	prompt: '> ',
+	// prompt: '> ',
+	prompt: '',
 });
 
 // 完成输入/回车
@@ -53,11 +57,13 @@ rl.on('line', (line) => {
 // });
 
 // 加载所有指令模块
-// import './plugins';
-
-fs.readdirSync(path.join(path.resolve(), './terminal/plugins/')).map(value => {import('./plugins/' + value)});
+readdirSync(path.join(path.resolve(), './terminal/plugins/')).map(value => {
+	logger.info('[终端] [模块] 正在加载命令模块: '+ value);
+	import('./plugins/' + value);
+});
 
 
 // 显示提示字符
-rl.prompt();
+// rl.prompt();
 
+logger.info('[终端] 终端命令启动完成');

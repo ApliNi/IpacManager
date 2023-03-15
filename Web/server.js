@@ -6,7 +6,7 @@ import http from 'http';
 import { Config } from '../config.js';
 import { serverHttp, serverHttpError } from './http.js';
 import { serverWS } from './ws.js';
-
+import { logger } from '../lib/logger.js';
 
 // express
 const app = express();
@@ -33,3 +33,5 @@ server.on('upgrade', (req, socket, head) => {
 
 wss.on('connection', serverWS);
 
+
+logger.info('[前端] WEB 服务器启动完成');

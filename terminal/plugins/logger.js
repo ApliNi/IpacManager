@@ -1,4 +1,4 @@
-// /logger
+// 日志记录器
 
 import { LoggerData } from "../../lib/logger.js";
 import { Terminal } from "../command.js";
