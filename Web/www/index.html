@@ -14,37 +14,73 @@
 	<!-- 布局 -->
 	<div class="layout">
 		<!-- 左侧菜单栏 -->
-		<div class="menubar">
+		<div id="btn_open_menubar_full"></div>
+		<div id="ui_menubar" class="menubar">
 			<br />
 
 			<span class="subtitle">应用</span>
-			<a href="#statis"><i class="bi bi-pie-chart"></i>状态信息</a>
-			<a href="#example"><i class="bi bi-boxes"></i>应用实例</a>
-			<a href="#resource"><i class="bi bi-folder2"></i>文件管理</a>
-			<a href="#terminal"><i class="bi bi-terminal"></i>命令终端</a>
+			<a href="#/statis"><i class="bi bi-pie-chart"></i>状态信息</a>
+			<a href="#/example"><i class="bi bi-boxes"></i>应用实例</a>
+			<a href="#/resource"><i class="bi bi-folder2"></i>资源管理</a>
+			<a href="#/terminal"><i class="bi bi-terminal"></i>命令终端</a>
 
 			<span class="subtitle">管理</span>
-			<a href="#config"><i class="bi bi-braces-asterisk"></i>软件配置</a>
+			<a href="#/config"><i class="bi bi-braces-asterisk"></i>软件配置</a>
 		</div>
 
 		<!-- main -->
 		<div class="main">
 			<!-- 顶部菜单栏 -->
 			<div class="topbar box">
-				<!-- 展开左侧菜单 -->
-				<i class="open_menubar bi bi-arrow-right-square"></i>
-				<!-- 页面标题 -->
-				<span class="title" id="page_title">标题</span>
+				<div id="btn_open_menubar" style="display: inherit;">
+					<!-- 展开左侧菜单 -->
+					<i class="open_menubar bi bi-layout-sidebar-inset"></i>
+					<!-- 页面标题 -->
+					<span id="page_title" class="title"></span>
+				</div>
+
 				<!-- 用户信息按钮 -->
 				<div class="user"></div>
 
+				<div style="margin: auto;"></div>
 
 				<!-- 关闭/退出 -->
 				<i class="bi bi-power -left"></i>
 			</div>
+
+			<!-- 子页面 -->
+			<div id="page">
+
+				<div id="page_/welcome" data-title="Welcome~">
+					<h2>欢迎</h2>
+				</div>
+
+				<div id="page_/statis" data-title="应用 / 状态信息">
+					<h2>统计信息</h2>
+				</div>
+
+				<div id="page_/example" data-title="应用 / 应用实例">
+					<h2>应用实例</h2>
+				</div>
+
+				<div id="page_/resource" data-title="应用 / 资源管理">
+					<h2>资源管理</h2>
+				</div>
+
+				<div id="page_/terminal" data-title="应用 / 命令终端">
+					<h2>命令终端</h2>
+				</div>
+
+				<div id="page_/config" data-title="管理 / 软件配置">
+					<h2>软件配置</h2>
+				</div>
+
+			</div>
 		</div>
 	</div>
 </body>
+	<script type="text/javascript" src="/plugins/layout.js"></script>
+	<script type="text/javascript" src="/plugins/pages.js"></script>
 </html>
 
 

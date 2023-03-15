@@ -19,10 +19,10 @@ console.log('\x1B[34m'+ String.raw`- IpacServerServer v0.0.0
 
 
 
-// 启动后端
+// 启动后端服务
 // await ManagerStart();
 
-// 启动前端
+// 启动前端服务
 await import('./Web/server.js');
 
 // 启动控制台

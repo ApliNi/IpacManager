@@ -55,8 +55,8 @@ body, pre, code, input, textarea, .no-cake-title-font { /* 正文字体 */
 	font-family: 'JetBrainsMono', 'PingFang SC', 'HarmonyOS';
 	color: var(--a1);
 }
-h1, h2, h3, h4, h5, h6, .btn{  /*标题&按钮字体*/
-	margin: 0 0 7px 0;  font-family: 'Ubuntu_and_JetBrainsMono', 'HarmonyOS', 'Trebuchet MS';
+h1, h2, h3, h4, h5, h6, .btn, .title{  /*标题&按钮字体*/
+	font-family: 'Ubuntu_and_JetBrainsMono', 'HarmonyOS', 'Trebuchet MS';
 }
 
 p{
@@ -92,7 +92,7 @@ del {text-decoration: line-through 2px}
 
 /*盒子*/
 .box {
-	/* margin: 15px 0 25px 0; */
+	margin: 0 0 25px 0;
 	width: 100%;
 	padding: 14px 18px;
 	background-color: var(--a0);
@@ -148,7 +148,7 @@ img {-webkit-user-drag: none}
 /*浅色*/
 @media (prefers-color-scheme: light) {
 	body {
-		--a0: #f7f7f7;
+		--a0: #fff;
 		--a1: #162838;
 		background-image: repeating-linear-gradient(135deg, #5dccff0f, #5dccff0f 4rem, transparent 0, transparent 8rem);
 		min-height: calc(100vh);  /*修复条纹裂开*/
@@ -190,7 +190,7 @@ img {-webkit-user-drag: none}
 i.bi{
 	padding-right: 10px;
 	font-size: 18px;
-	margin-bottom: -1px;
+	/* margin-bottom: -1px; */
 }
 i.bi.-left{
 	padding-right: 0;

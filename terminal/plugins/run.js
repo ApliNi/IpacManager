@@ -44,6 +44,4 @@ Terminal.RunCommandEvent.on('run', (e) => {
 	run(__command, __path).stdout.on('data', (data) => {
 		process.stdout.write(iconv.decode(data, __coding)); // 不换行输出
 	});
-
-	return true;
 });

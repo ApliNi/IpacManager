@@ -16,12 +16,12 @@ export let Terminal = {
 	RunCommandEvent: new EventEmitter(),
 	// 构造函数
 	Constructor: function(mainCommand, commandArray){
-		this.mainCommand = mainCommand,
-		this.commandArray = commandArray,
+		this.mainCommand = mainCommand;
+		this.commandArray = commandArray;
 		this.sendMessage = (message) => {
 			console.log(message);
-		}
-	}
+		};
+	},
 };
 
 
