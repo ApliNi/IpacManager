@@ -1,0 +1,86 @@
+
+
+
+
+.layout{
+	display: flex;
+	flex-direction: row;
+}
+
+/* .layout > .topbar > .logo{
+
+} */
+
+.layout > .menubar{
+	min-width: 240px;
+	height: 100vh;
+	background-color: rgb(30, 29, 36);
+	/* 禁止换行 / 溢出隐藏 */
+	white-space: nowrap;
+	overflow: hidden;
+}
+@media(max-width: 900px){
+	.layout > .menubar{
+		max-width: 0;
+		min-width: 0;
+	}
+}
+.layout > .menubar.-open{
+	min-width: 240px;
+	position: fixed;
+}
+
+.layout > .menubar > *{
+	padding: 7px 0 7px 18px;
+	margin: 5px 10px;
+}
+
+.layout > .menubar *{
+	color: #f7f7f7;
+}
+
+.layout	> .menubar .subtitle{
+	color: #909399;
+	font-size: 12px;
+	display: block;
+	padding-bottom: 0;
+	padding-top: 14px;
+}
+
+.layout	> .menubar a{
+	padding-left: 34px;
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+}
+.layout	> .menubar a:hover{
+	background-color: rgba(255, 255, 255, 0.275);
+}
+
+
+
+/* main */
+.layout > .main{
+	width: 100%;
+	min-height: 100vh;
+	padding: 25px;
+	overflow-y:scroll; /* 始终显示滚动条 */
+}
+
+.layout > .main > .topbar{
+	display: flex;
+	align-items: center;
+}
+
+.layout > .main > .topbar > .open_menubar{
+	display: none;
+}
+@media(max-width: 900px){
+	.layout > .main > .topbar > .open_menubar{
+		display: inline;
+	}
+}
+
+/* .layout > .main > .topbar .title{
+
+} */
