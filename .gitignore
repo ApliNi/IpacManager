@@ -1,0 +1,16 @@
+
+# 用户数据
+logs/
+_user/
+
+# SSL和网站
+Web/cert/*
+Web/www/favicon.ico
+
+# Debug
+tempCodeRunnerFile.js
+
+# node
+node_modules/
+package-lock.json
+
