@@ -3,7 +3,7 @@
 import { getIP } from "../lib/getIP.js";
 import urlMoudule from 'url';
 import path from 'path';
-import { existsSync, readFileSync } from "fs";
+import { existsSync } from "fs";
 import { logger } from "../lib/logger.js";
 
 

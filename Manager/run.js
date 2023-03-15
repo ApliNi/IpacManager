@@ -13,10 +13,10 @@ export function run(command){
 	return cmd;
 };
 
-let cmd = cp.exec('ping 127.0.0.1', {encoding: 'binary'});
+// cmd.stdout.on('data', (data) => {
+// 	logger.info(iconv.decode(data, 'gbk'));
+// });
 
-cmd.stdout.on('data', (data) => {
-	logger.info(iconv.decode(data, 'gbk'));
-});
-
-
+// cmd.stderr.on('data', (data) => {
+// 	logger.info(iconv.decode(data, 'gbk'));
+// });

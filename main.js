@@ -26,7 +26,7 @@ console.log('\x1B[34m'+ String.raw`- IpacServerServer v0.0.0
 await import('./Web/server.js');
 
 // 启动控制台
-await import('./terminal/main.js');
+await import('./terminal/command.js');
 
 // 结束
 logger.correct('[MAIN] 服务器启动完成! 耗时 '+ (performance.now() - Config._c.start_time) +'ms');
