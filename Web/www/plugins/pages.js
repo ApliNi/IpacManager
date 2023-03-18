@@ -1,6 +1,8 @@
 
+import { pageIDFromURL, switchPage } from './layout.js';
+
 // 配置
-let Config = {
+export let Config = {
 	current_pageID: '/welcome',
 };
 

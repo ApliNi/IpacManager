@@ -7,9 +7,6 @@ import { logger } from '../lib/logger.js';
 import path from 'path';
 
 
-logger.info('[终端] 正在启动终端命令模块');
-
-
 // 配置
 export let Terminal = {
 	// 用户运行指令事件
@@ -66,4 +63,4 @@ readdirSync(path.join(path.resolve(), './terminal/plugins/')).map(value => {
 // 显示提示字符
 // rl.prompt();
 
-logger.info('[终端] 终端命令启动完成');
+logger.correct('[终端] 终端启动完成');

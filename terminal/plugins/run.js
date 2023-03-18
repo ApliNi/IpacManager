@@ -28,10 +28,10 @@ Terminal.RunCommandEvent.on('run', (e) => {
 		__path = path.join(pr.p);
 	}
 	else if(pr?.rp){
-		__path = path.join(path.resolve(), './Manager/defaultDirectory/', pr.rp)
+		__path = path.join(path.resolve(), './Manager/defaultRunDirectory/', pr.rp)
 	}
 	else{
-		__path = path.join(path.resolve(), './Manager/defaultDirectory/');
+		__path = path.join(path.resolve(), './Manager/defaultRunDirectory/');
 	}
 	// coding
 	let __coding = pr?.coding ? pr.coding : 'utf-8';

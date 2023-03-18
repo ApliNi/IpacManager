@@ -40,11 +40,11 @@ server.on('upgrade', (req, socket, head) => {
 wss.on('connection', serverWS);
 
 
-// 加载所有HttpApi模块
+// 加载所有Api模块
 readdirSync(path.join(path.resolve(), './Web/api/')).map(value => {
-	logger.info('[前端] [HTTP] [模块] 正在加载HttpApi模块: '+ value);
+	logger.info('[前端] [模块] 正在加载 HttpApi 模块: '+ value);
 	import('./api/' + value);
 });
 
 
-logger.info('[前端] WEB 服务器启动完成');
+logger.correct('[前端] WEB 服务器启动完成');

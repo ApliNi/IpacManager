@@ -2,17 +2,17 @@
 @font-face {
 	font-family: 'HarmonyOS';
 	font-display: swap;
-	src: url('/plugins/HarmonyOS_Sans_SC_Medium.subset.woff2') format('woff2');
+	src: url('./File/HarmonyOS_Sans_SC_Medium.subset.woff2') format('woff2');
 }
 @font-face {
 	font-family: 'JetBrainsMono';
 	font-display: swap;
-	src: url('/plugins/JetBrainsMono-Regular.woff2') format('woff2');
+	src: url('./File/JetBrainsMono-Regular.woff2') format('woff2');
 }
 @font-face {
 	font-family: 'Ubuntu_and_JetBrainsMono';
 	font-display: swap;
-	src: url('/plugins/Ubuntu-Regular.subset.woff2?v=2') format('woff2'),
+	src: url('./File/Ubuntu-Regular.subset.woff2?v=2') format('woff2'),
 		 local("JetBrainsMono");
 	word-spacing: -5px; /*等宽空格间距太大*/
 }
@@ -38,9 +38,9 @@ body, html {margin: 0}
 
 
 /*光标*/
-html {cursor: url('/plugins/img/command.png'), default} /*黄色*/
-a, button, td, .-link, summary, label {cursor: url('/plugins/img/command_2.png'), default} /*青色*/
-textarea, input {cursor: url('/plugins/img/command_3.png'), default} /*紫色*/
+html {cursor: url('./File/command.png'), default} /*黄色*/
+a, button, td, .-link, summary, label {cursor: url('./File/command_2.png'), default} /*青色*/
+textarea, input {cursor: url('./File/command_3.png'), default} /*紫色*/
 /*滚动条*/
 ::-webkit-scrollbar {width: 6px; height: 6px}
 ::-webkit-scrollbar-thumb {background: #62626280}
@@ -183,9 +183,6 @@ img {-webkit-user-drag: none}
 		background-color: transparent;
 	}
 }
-
-/*按钮*/
-/* a:hover, .-link:hover{background-color: var(--cT);} */
 
 i.bi{
 	padding-right: 10px;

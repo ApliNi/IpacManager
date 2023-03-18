@@ -1,7 +1,4 @@
 
-
-
-
 .layout{
 	display: flex;
 	flex-direction: row;
@@ -11,13 +8,16 @@
 
 } */
 
+/* 菜单栏 */
 .layout > .menubar{
 	min-width: 240px;
 	height: 100vh;
 	background-color: rgb(30, 29, 36);
+	/* 滚动条 */
+	overflow-y: auto;
 	/* 禁止换行 / 溢出隐藏 */
 	white-space: nowrap;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 @media(max-width: 900px){
 	.layout > .menubar{
@@ -30,6 +30,7 @@
 	}
 }
 
+/* li */
 .layout > .menubar > *{
 	padding: 7px 0 7px 18px;
 	margin: 5px 10px;
@@ -53,7 +54,9 @@
 	display: flex;
 	align-items: center;
 }
-.layout	> .menubar a:hover,
+.layout	> .menubar a:hover{
+	background-color: rgba(92, 92, 92, .3);
+}
 .layout	> .menubar a.-open{
 	background-color: rgba(92, 92, 92, .25);
 }
@@ -62,6 +65,13 @@
 	color: var(--c);
 }
 
+.layout	> .menubar hr{
+	padding: 0;
+	margin: 15px 20px;
+	height: 2px;
+}
+
+/* 菜单栏展开按钮相关 */
 #btn_open_menubar_full{
 	position: absolute;
 	min-width: 100vw;
@@ -70,7 +80,7 @@
 }
 @media(max-width: 900px){
 	#btn_open_menubar_full.-open{
-		background-color: rgba(0, 0, 0, .25);
+		background-color: rgba(0, 0, 0, 0.2);
 		pointer-events: all;
 	}
 }
@@ -82,7 +92,7 @@
 	width: 100%;
 	min-height: 100vh;
 	padding: 25px;
-	overflow-y:scroll; /* 始终显示滚动条 */
+	overflow-y: scroll; /* 始终显示滚动条 */
 }
 
 .layout > .main > .topbar{

@@ -5,7 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>[IpacEL]/ Acb</title>
 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+	<!-- 图标库 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
 	<link rel="stylesheet" href="/plugins/cake.css?v=100">
 	<link rel="stylesheet" href="/plugins/layout.css?v=100">
@@ -19,13 +20,23 @@
 			<br />
 
 			<span class="subtitle">应用</span>
-			<a href="#/statis"><i class="bi bi-pie-chart"></i>状态信息</a>
-			<a href="#/example"><i class="bi bi-boxes"></i>应用实例</a>
+			<a href="#/statis"><i class="bi bi-radioactive"></i>状态信息</a> <!-- <i class="bi bi-speedometer"></i> -->
+			<a href="#/instances"><i class="bi bi-boxes"></i>应用实例</a>
 			<a href="#/resource"><i class="bi bi-folder2"></i>资源管理</a>
-			<a href="#/terminal"><i class="bi bi-terminal"></i>命令终端</a>
 
 			<span class="subtitle">管理</span>
 			<a href="#/config"><i class="bi bi-braces-asterisk"></i>软件配置</a>
+
+			<hr />
+
+			<span class="subtitle">工具</span>
+			<a href="#/tool_notepad"><i class="bi bi-clipboard-check"></i>记事本 |</a>
+			<a href="#/tool_regex"><i class="bi bi-regex"></i>正则测试</a>
+
+			<hr />
+
+			<span class="subtitle">文档</span>
+			<a target="_blank" href="https://github.com/ApliNi/IpacManager/"><i class="bi bi-github"></i>GitHub</a>
 		</div>
 
 		<!-- main -->
@@ -34,11 +45,10 @@
 			<div class="topbar box">
 				<div id="btn_open_menubar" style="display: inherit;">
 					<!-- 展开左侧菜单 -->
-					<i class="open_menubar bi bi-layout-sidebar-inset"></i>
+					<i class="open_menubar bi bi-caret-right-square"></i>
 					<!-- 页面标题 -->
-					<span id="page_title" class="title"></span>
+					<span id="page_title" class="title">Loading...</span>
 				</div>
-
 				<!-- 用户信息按钮 -->
 				<div class="user"></div>
 
@@ -59,16 +69,12 @@
 					<h2>统计信息</h2>
 				</div>
 
-				<div id="page_/example" data-title="应用 / 应用实例">
+				<div id="page_/instances" data-title="应用 / 应用实例">
 					<h2>应用实例</h2>
 				</div>
 
 				<div id="page_/resource" data-title="应用 / 资源管理">
 					<h2>资源管理</h2>
-				</div>
-
-				<div id="page_/terminal" data-title="应用 / 命令终端">
-					<h2>命令终端</h2>
 				</div>
 
 				<div id="page_/config" data-title="管理 / 软件配置">
@@ -79,8 +85,6 @@
 		</div>
 	</div>
 </body>
-	<script type="text/javascript" src="/plugins/layout.js"></script>
-	<script type="text/javascript" src="/plugins/pages.js"></script>
+	<script type="module" src="./main.js"></script>
+	<script type="module" src="./plugins/pages.js"></script>
 </html>
-
-

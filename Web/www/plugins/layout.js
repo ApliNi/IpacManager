@@ -1,4 +1,7 @@
 
+import { Config } from './pages.js';
+
+
 // 为按钮生成id
 Array.prototype.slice.call(document.getElementById('ui_menubar').getElementsByTagName('a')).forEach(async (e) => {
 	if(e){
@@ -19,14 +22,14 @@ document.getElementById('btn_open_menubar_full').addEventListener('click', async
 
 
 // 从url中获取当前pageID
-function pageIDFromURL(){
+export function pageIDFromURL(){
 	let u = window.location.hash + '?';
 	return u.substring(u.indexOf('#') + 1, u.indexOf('?'));
 };
 
 
 // 切换页面
-async function switchPage(pageID, title = null){
+export async function switchPage(pageID, title = null){
 	// 更新页面
 	document.getElementById('page_'+ Config.current_pageID)?.classList.remove('-open');
 	document.getElementById('page_'+ pageID)?.classList.add('-open');
