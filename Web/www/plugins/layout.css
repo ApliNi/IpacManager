@@ -70,6 +70,11 @@
 	margin: 15px 20px;
 	height: 2px;
 }
+.layout	> .menubar hr:first-child{ /* 第一个hr不显示 */
+	padding: 0;
+	margin: 15px 20px;
+	height: 0;
+}
 
 /* 菜单栏展开按钮相关 */
 #btn_open_menubar_full{

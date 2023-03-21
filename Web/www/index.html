@@ -17,10 +17,10 @@
 		<!-- 左侧菜单栏 -->
 		<div id="btn_open_menubar_full"></div>
 		<div id="ui_menubar" class="menubar">
-			<br />
+			<!-- <hr />
 
 			<span class="subtitle">应用</span>
-			<a href="#/statis"><i class="bi bi-radioactive"></i>状态信息</a> <!-- <i class="bi bi-speedometer"></i> -->
+			<a href="#/statis"><i class="bi bi-radioactive"></i>状态信息</a>
 			<a href="#/instances"><i class="bi bi-boxes"></i>应用实例</a>
 			<a href="#/resource"><i class="bi bi-folder2"></i>资源管理</a>
 
@@ -36,13 +36,13 @@
 			<hr />
 
 			<span class="subtitle">文档</span>
-			<a target="_blank" href="https://github.com/ApliNi/IpacManager/"><i class="bi bi-github"></i>GitHub</a>
+			<a target="_blank" href="https://github.com/ApliNi/IpacManager/"><i class="bi bi-github"></i>GitHub</a> -->
 		</div>
 
 		<!-- main -->
 		<div class="main">
 			<!-- 顶部菜单栏 -->
-			<div class="topbar box">
+			<div id="ui_topbar" class="topbar box">
 				<div id="btn_open_menubar" style="display: inherit;">
 					<!-- 展开左侧菜单 -->
 					<i class="open_menubar bi bi-caret-right-square"></i>
@@ -61,8 +61,11 @@
 			<!-- 子页面 -->
 			<div id="page">
 
-				<div id="page_/welcome" data-title="Welcome~">
-					<h2>欢迎</h2>
+				<!-- <div id="page_/login" data-title="登录">
+					<div class="box">
+						<input />
+						<button title="登录按钮">登录</button>
+					</div>
 				</div>
 
 				<div id="page_/statis" data-title="应用 / 状态信息">
@@ -79,12 +82,11 @@
 
 				<div id="page_/config" data-title="管理 / 软件配置">
 					<h2>软件配置</h2>
-				</div>
+				</div> -->
 
 			</div>
 		</div>
 	</div>
 </body>
 	<script type="module" src="./main.js"></script>
-	<script type="module" src="./plugins/pages.js"></script>
 </html>

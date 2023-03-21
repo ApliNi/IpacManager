@@ -1,9 +1,5 @@
 // 主程序
 
-// import { Config } from './config.js';
-// import { logger } from './lib/logger.js';
-
-
 // 输出LOGO
 console.log(String.raw`%c- IpacServerManager v0.0.0
  ______                                                            __
@@ -16,6 +12,28 @@ console.log(String.raw`%c- IpacServerManager v0.0.0
               \ \_\
                \/_/
 `, 'color:#008fff');
+
+
+// 库
+import('./plugins/lib.js');
+
+// 事件
+import('./plugins/event.js');
+
+// 页面模块
+import('./plugins/pages.js');
+
+// 页面功能
+import('./plugins/ui.js');
+
+// 登录
+import('./plugins/login.js');
+
+
+
+
+// 加载基础资源 -> 登录 -> 加载应用模块
+// 
 
 
 

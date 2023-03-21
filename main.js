@@ -18,6 +18,10 @@ console.log('\x1B[34m'+ String.raw`- IpacServerManager v0.0.0
 ` + '\x1B[0m');
 
 
+
+// 加载数据库
+await import('./lib/sqlLoad.js');
+
 // 启动后端服务
 // await ManagerStart();
 
